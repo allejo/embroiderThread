@@ -37,3 +37,19 @@ def user_input_option(valid_options, maxNum):
                 return user_input.upper()
             
             print("Try again, enter a valid selection.")
+
+
+def user_input_options(valid_options):
+    while True:
+        user_input = input('Enter your selection.')
+
+        try:
+            user_input = int(user_input)
+        except ValueError:
+            user_input = user_input.upper()
+            pass
+
+        if user_input in valid_options:
+            return user_input
+
+        print("Try again, enter a valid selection.")
